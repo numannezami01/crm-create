@@ -10,7 +10,7 @@ const ForgotPassword = () => {
 
   const handleForgotPassword = async (e) => {
     e.preventDefault()
-    if (!email) {
+    if (!email) { 
       setError('Email is required.');
       return;
     }

@@ -23,7 +23,7 @@ const  login = () => {
     }
 
     try {
-      const response = await axios.post('/api/login', {username, password }); //enter backend api url to get loggin access
+      const response = await axios.get('/api/login', {username, password }); //enter backend api url to get loggin access
       const token = response.data.token;
 
     } catch (error) {
@@ -63,7 +63,6 @@ const  login = () => {
              {error && <p style={{ color: 'red' }}>{error}</p>}
             <button className={style.button}>login</button>
           </form>
-          
             <Link className= {style.forgot} href="/Forget">forgot password</Link>
         </div>
        </div>
